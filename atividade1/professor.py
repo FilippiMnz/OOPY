@@ -40,3 +40,9 @@ class Professor:
             self.__CargaHoraria -= horas
         else:
             print("Erro: A quantidade de horas a remover deve ser positiva e menor ou igual à carga horária atual.")
+
+    def Escolha(Opc):
+        if Opc == 1:
+            menos_horas()
+        elif Opc == 2:
+            mais_horas()
