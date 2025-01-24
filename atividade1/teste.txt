@@ -1,0 +1,20 @@
+    def aluno(aluno, nome, matricula, creditos, curso, notas):
+        aluno.nome = nome
+        aluno.matricula = matricula
+        aluno.creditos = creditos
+        aluno.curso = curso
+        aluno.notas = notas
+
+
+    print("Informações do Estudante:")
+    print(f"Nome: {estudante.nome}")
+    print(f"Matrícula: {estudante.matricula}")
+    print(f"Créditos: {estudante.creditos}\n")
+
+    print("Adicionando 40 creditos")
+    estudante.adicionar_creditos(40)
+    print(f"Créditos atualizados: {estudante.creditos}\n")
+
+    print("Alterando nome para Tiao do gas")
+    estudante.alterar_nome("Tiao do gas")
+    print(f"Nome atualizado: {estudante.nome}")
