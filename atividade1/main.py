@@ -1,5 +1,12 @@
 from professor import Professor
 #Aluno
+class Endereco:
+   def __init__(self, num):
+       self.__numero = num
+       self.__complemento = 0
+
+
+
 class Estudante:
     def __init__(self, nome: str, matricula: int, creditos: int):
         self.__nome: str = nome
