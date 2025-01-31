@@ -22,6 +22,7 @@ class NumberDisplay:
             self.__value = replacementValue
         else:
             print("Valor inválido!")
+            
 
     #
 
@@ -61,11 +62,11 @@ relogio = ClockDisplay()
 print(relogio.getTime())  
 
 print("Testando loop:")
-relogio.setTime(10,20, 50)
+relogio.setTime(23,59, 50)
 i = 0
-while i < 10 :
-    relogio.timeTick()
+while i <= 10 :
     print(relogio.getTime())  
+    relogio.timeTick()
     i += 1
     time.sleep(1)
 
@@ -73,7 +74,7 @@ while i < 10 :
 # Teste atividade 2
 print("Testando NumberDisplay:")
 teste_numero = NumberDisplay(60)
-teste_numero.setValue(10)
+teste_numero.setValue(15)
 print(teste_numero.getDisplayValue())  
 print(teste_numero.getDisplayValue())  
 
