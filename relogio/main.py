@@ -6,12 +6,12 @@ from numberDisplay import NumberDisplay
 relogio = ClockDisplay()
 print(relogio.getTime())  
 
-print("Testando loop:")
-relogio.setTime(10,20, 50)
+print("Testando loop: de 11 segundos")
+relogio.setTime(23,59, 50)
 i = 0
-while i < 10 :
-    relogio.timeTick()
+while i <= 11 :
     print(relogio.getTime())  
+    relogio.timeTick()
     i += 1
     time.sleep(1)
 
