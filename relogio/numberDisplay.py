@@ -8,9 +8,12 @@ class NumberDisplay:
     
     def getDisplayValue(self):
         return f"{self.__value:02d}"
-   
+    
+
+    #atividade 1
     def getValue(self):
         return self.__value
+    
     
     def setValue(self, replacementValue):
         if 0 <= replacementValue < self.__limit:
@@ -18,18 +21,4 @@ class NumberDisplay:
         else:
             print("Valor inválido!")
 
-
-# Teste NumberDisplay
-print("Testando NumberDisplay:")
-
-teste_numero = NumberDisplay(60)
-teste_numero.setValue(12)
-print(teste_numero.getDisplayValue())  
-teste_numero.incremento()
-print(teste_numero.getDisplayValue())  
-
-##teste para virada
-teste_numero.setValue(59)
-print(teste_numero.getDisplayValue()) 
-teste_numero.incremento()
-print(teste_numero.getDisplayValue())  
+    #

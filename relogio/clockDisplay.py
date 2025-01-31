@@ -1,8 +1,11 @@
+from numberDisplay import NumberDisplay
+
+
 class ClockDisplay:
     def __init__(self):
         self.__hora = NumberDisplay(24)
         self.__minuto = NumberDisplay(60)
-        self.__segundo = NumberDisplay(60)
+        self.__segundo = NumberDisplay(60) #atividade 6, não precisa modificar display
         self.__updateDisplay()
     
     def __updateDisplay(self):
@@ -27,17 +30,3 @@ class ClockDisplay:
         self.__segundo.setValue(second)
         self.__updateDisplay()
 
-
-# Teste ClockDisplay
-print("\nTestando ClockDisplay:")
-relogio = ClockDisplay()
-print(relogio.getTime()) 
-
-relogio.setTime(0, 59, 58)
-print(relogio.getTime())  
-
-relogio.timeTick()
-print(relogio.getTime())  
-
-relogio.timeTick()
-print(relogio.getTime())  
