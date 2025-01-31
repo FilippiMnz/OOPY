@@ -1,5 +1,4 @@
 import time
-from clockDisplay import ClockDisplay
 class NumberDisplay:
     def __init__(self, rollOverLimit):
         self.__limit = rollOverLimit
