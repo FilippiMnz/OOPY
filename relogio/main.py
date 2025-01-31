@@ -1,3 +1,4 @@
+import time
 class NumberDisplay:
     def __init__(self, rollOverLimit):
         self.__limit = rollOverLimit
@@ -28,7 +29,7 @@ class ClockDisplay:
     def __init__(self):
         self.__hora = NumberDisplay(24)
         self.__minuto = NumberDisplay(60)
-        self.__segundo = NumberDisplay(60)
+        self.__segundo = NumberDisplay(60) #atividade 6, não precisa modificar display
         self.__updateDisplay()
     
     def __updateDisplay(self):
@@ -54,6 +55,19 @@ class ClockDisplay:
         self.__updateDisplay()
 
 
+#loop
+relogio = ClockDisplay()
+print(relogio.getTime())  
+
+print("Testando loop:")
+relogio.setTime(10,20, 50)
+i = 0
+while i < 10 :
+    relogio.timeTick()
+    print(relogio.getTime())  
+    i += 1
+    time.sleep(1)
+
 
 # Teste atividade 2
 print("Testando NumberDisplay:")
@@ -67,6 +81,7 @@ print("\nTestando ClockDisplay:")
 relogio = ClockDisplay()
 print(relogio.getTime())  
 
+#atividade 5
 relogio.setTime(23, 59, 57)
 print(relogio.getTime())  
 
@@ -78,3 +93,16 @@ print(relogio.getTime())
 
 relogio.timeTick()
 print(relogio.getTime())  
+
+#teste 1 hora, 3 incrementos atividade 5
+print("teste 1:00")
+relogio.setTime(00, 59, 57)
+
+relogio.timeTick()
+print(relogio.getTime())  
+
+relogio.timeTick()
+print(relogio.getTime())  
+
+relogio.timeTick()
+print(relogio.getTime())   #1 hora
