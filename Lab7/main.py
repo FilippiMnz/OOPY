@@ -4,6 +4,11 @@ from dvd import DVD
 
 def main():
     catalogo = Catalogo()
+    catalogo.adicionar(DVD("Hobbit", 180,"Tolkien", True, "comentario"))
+    catalogo.adicionar(CD("Eected dead", 60,"serj tankian", 14, True, "comentario"))
+    catalogo.adicionar(DVD("Pearcy Jackson", 60,"sei la", True, "comentario"))
+    catalogo.adicionar(CD("Scars on Broadway dead", 60,"Daron Malakian", 15, False, "comentario"))
+
     while True:
         print("\n1. Adicionar CD")
         print("2. Adicionar DVD")
@@ -31,13 +36,14 @@ def main():
             catalogo.adicionar(DVD(titulo, tempo, diretor, possuo, comentario))
         elif opcao == "3":
             titulo = input("Título do item a remover: ")
-            catalogo.remover(titulo)
+            print(catalogo.remover(titulo))
+            
         elif opcao == "4":
             catalogo.listar_todos()
         elif opcao == "5":
             catalogo.listar_cds_possuo()
         elif opcao == "6":
-            print("O catálogo está vazio!" if catalogo.catalogo_vazio() else "O catálogo tem itens!")
+            print(catalogo.catalogo_vazio())
         elif opcao == "7":
             break
         else:

@@ -1,6 +1,6 @@
-from item import Item
 from cd import CD
 from dvd import DVD
+from item import Item
 
 class Catalogo:
     def __init__(self):
@@ -11,7 +11,11 @@ class Catalogo:
             self.itens.append(item)
     
     def remover(self, titulo):
-        self.itens = [item for item in self.itens if item.titulo != titulo]
+        for item in self.itens:
+            if item.get_titulo() == titulo:
+                self.itens.remove(item)
+                return True
+        return False
     
     def listar_todos(self):
         cds = [item for item in self.itens if isinstance(item, CD)]
@@ -21,8 +25,11 @@ class Catalogo:
     
     def listar_cds_possuo(self):
         for item in self.itens:
-            if isinstance(item, CD) and item.possuo:
+            if isinstance(item, CD) and item.get_possuo():
                 item.imprime()
 
     def catalogo_vazio(self):
-        return len(self.itens) == 0
+        if len(self.itens) == 0:
+            return True
+        else:
+            return False
