@@ -18,10 +18,12 @@ class Catalogo:
         return False
     
     def listar_todos(self):
-        cds = [item for item in self.itens if isinstance(item, CD)]
-        dvds = [item for item in self.itens if isinstance(item, DVD)]
-        for item in cds + dvds:
-            item.imprime()
+        for item in self.itens:
+            if isinstance(item, CD):
+                item.imprime()
+        for item in self.itens:
+            if isinstance(item, DVD):
+                item.imprime()
     
     def listar_cds_possuo(self):
         for item in self.itens:
